@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{%load static%}
+
+{% block content %}
+
+<div>
+    <h1>Contenido inicio</h1>
+</div>
+
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img style="border-radius: 5%;" src="{% static "img/corporative.bmp" %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img style="border-radius: 5%;" src="{% static "img/movámonosSeguros.bmp" %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img style="border-radius: 5%;" src="{% static "img/exijaviajeSeguro.bmp" %}" class="d-block w-100" alt="...">
+        </div>
+      </div>
+  </div>
+
+
+
+{% endblock content %}
