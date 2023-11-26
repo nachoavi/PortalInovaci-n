@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+{%load static%}
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Transporte Escolar Chile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="{% static "css/reviews.css" %}">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
 </head>
 <body>
 
-{%load static%}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">
@@ -19,7 +24,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Opiniones</a>
+        <a class="nav-link" href="{% url "reviews" %}">Opiniones</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Nuevas Tecnologías</a>
@@ -28,20 +33,20 @@
         <a class="nav-link" href="#">Capacitaciones</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Conductores</a>
+        <a class="nav-link" href="{% url "drivers" %}">Conductores</a>
       </li>
     </ul>
   </div>
 </nav>
 
 <!-- Agrega el contenido principal de tu página aquí -->
-<div class="layout-content p-3" id="layout-content">
 
-    {% block content %}
-                    
-    {% endblock content %}
 
-</div>
+{% block content %}
+                
+{% endblock content %}
+
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>

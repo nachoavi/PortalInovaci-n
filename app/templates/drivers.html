@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="container text-center mt-5">
+    <section id="driver-profiles" class="d-flex flex-column align-items-center">
+        <div class="driver-profile mb-5 bg-white p-4 shadow mx-auto" style="max-width: 400px; width: 100%">
+            <!--Imagen del perfil-->
+            <div class="profile-img">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" alt="Perfil del Conductor">
+            </div>
+            <!--Nombre del Conductor y Valoración-->
+            <div class="driver-info">
+                <h2>Marta González</h2>
+                <!--Estrellas de Valoración (ejemplo: 3.5 estrellas)-->
+                <div class="rating">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i> <!--Media estrella-->
+                    <i class="far fa-star text-warning"></i> <!--Estrella vacía-->
+                    <i class="far fa-star text-warning"></i> <!--Estrella vacía-->
+                </div>
+            </div>
+            <!--Lema del Conductor-->
+            <div class="driver-motto">
+                <p>"Seguridad y puntualidad en cada trayecto"</p>
+            </div>
+            <!--Botón de Evaluar (utilizando Bootstrap)-->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ratingModal" data-conductor="Marta González">
+                Evaluar Conductor
+            </button>
+        </div>
+
+        <div class="driver-profile mb-5 bg-white p-4 shadow mx-auto" style="max-width: 400px; width: 100%">
+            <!--Imagen del perfil-->
+            <div class="profile-img">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" alt="Perfil del Conductor">
+            </div>
+            <!--Nombre del Conductor y Valoración-->
+            <div class="driver-info">
+                <h2>Ricardo Silva</h2>
+                <!--Estrellas de Valoración (ejemplo: 4.5 estrellas)-->
+                <div class="rating">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i> <!--Media estrella-->
+                </div>
+            </div>
+            <!--Lema del Conductor-->
+            <div class="driver-motto">
+                <p>"Conduciendo con pasión y responsabilidad"</p>
+            </div>
+            <!--Botón de Evaluar (utilizando Bootstrap)-->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ratingModal" data-conductor="Ricardo Silva">
+                Evaluar Conductor
+            </button>
+        </div>
+
+        <div class="driver-profile mb-5 bg-white p-4 shadow mx-auto" style="max-width: 400px; width: 100%">
+            <!--Imagen del perfil-->
+            <div class="profile-img">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" alt="Perfil del Conductor">
+            </div>
+            <!--Nombre del Conductor y Valoración-->
+            <div class="driver-info">
+                <h2>Carlos Ramirez</h2>
+                <!--Estrellas de Valoración (ejemplo: 4 estrellas)-->
+                <div class="rating">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i> <!--Estrella vacía-->
+                </div>
+            </div>
+            <!--Lema del Conductor-->
+            <div class="driver-motto">
+                <p>"Viajes seguros con una sonrisa"</p>
+            </div>
+            <!--Botón de Evaluar (utilizando Bootstrap)-->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ratingModal" data-conductor="Carlos Ramirez">
+                Evaluar Conductor
+            </button>
+        </div>
+
+        <div class="driver-profile mb-5 bg-white p-4 shadow mx-auto" style="max-width: 400px; width: 100%">
+            <!--Imagen del perfil-->
+            <div class="profile-img">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" alt="Perfil del Conductor">
+            </div>
+            <!--Nombre del Conductor y Valoración-->
+            <div class="driver-info">
+                <h2>Lorena Fernandez</h2>
+                <!--Estrellas de Valoración (ejemplo: 3 estrellas)-->
+                <div class="rating">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="far fa-star text-warning"></i> <!--Estrella vacía-->
+                    <i class="far fa-star text-warning"></i> <!--Estrella vacía-->
+                </div>
+            </div>
+            <!--Lema del Conductor-->
+            <div class="driver-motto">
+                <p>"Conduciendo con cuidado y amabilidad"</p>
+            </div>
+            <!--Botón de Evaluar (utilizando Bootstrap)-->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ratingModal" data-conductor="Lorena Fernandez">
+                Evaluar Conductor
+            </button>
+        </div>
+    </section>
+
+    <div class="modal fade" id="ratingModal" tabindex="-1" role="dialog" aria-labelledby="ratingModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ratingModalLabel">Evaluar a <span id="conductorNombre"></span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulario de Evaluación -->
+                    <form>
+                        <div class="form-group">
+                            <label for="rating">Tu Valoración:</label>
+                            <select class="form-control" id="rating">
+                                <option value="5">5 Estrellas - Excelente</option>
+                                <option value="4">4 Estrellas - Muy Bueno</option>
+                                <option value="3">3 Estrellas - Bueno</option>
+                                <option value="2">2 Estrellas - Regular</option>
+                                <option value="1">1 Estrella - No Satisfactorio</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewComment">Comentario:</label>
+                            <textarea class="form-control" id="reviewComment" rows="3" placeholder="Escribe tu comentario aquí..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Evaluación</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('#ratingModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget);
+        var conductorNombre = button.data('conductor');
+        var modal = $(this);
+        modal.find('#conductorNombre').text(conductorNombre);
+    });
+</script>
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
