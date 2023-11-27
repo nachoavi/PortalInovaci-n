@@ -12,11 +12,52 @@
 
 
 </head>
+
+<style>
+  body {
+      background-color: #f8f9fa;
+      color: #495057;
+  }
+
+  .jumbotron {
+      background-image: url('URL_DE_LA_IMAGEN_JUMBOTRON'); /* Reemplaza con la URL de tu imagen */
+      background-size: cover;
+      text-align: center;
+      padding: 150px 0;
+      margin-bottom: 0;
+  }
+
+  .feature {
+      padding: 50px 0;
+      text-align: center;
+  }
+
+  .feature img {
+      max-width: 100%;
+      height: 250px;
+      margin-bottom: 20px;
+  }
+
+  .feature h3 {
+      color: #007bff; /* Color azul Bootstrap */
+  }
+
+  .cta {
+      background-color: #28a745; /* Color verde Bootstrap */
+      color: #fff;
+      padding: 50px 0;
+      text-align: center;
+  }
+
+  .cta h2 {
+      margin-bottom: 20px;
+  }
+</style>
 <body>
 
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="{% url "index" %}">
     <img src="{% static "img/logo.bmp" %}" width="70" height="70" class="d-inline-block align-top" alt="Logo">
     Transporte Escolar Chile
   </a>
@@ -27,10 +68,10 @@
         <a class="nav-link" href="{% url "reviews" %}">Opiniones</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Nuevas Tecnologías</a>
+        <a class="nav-link" href="{% url "technologies" %}">Nuevas Tecnologías</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Capacitaciones</a>
+        <a class="nav-link" href="{% url "training" %}">Capacitaciones</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url "drivers" %}">Conductores</a>

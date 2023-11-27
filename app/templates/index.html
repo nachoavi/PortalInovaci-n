@@ -4,12 +4,48 @@
 
 {% block content %}
 
-<div>
-    <h1>Contenido inicio</h1>
-</div>
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+      <div class="container">
+          <h1 class="display-4">Encuentra los Mejores Conductores para tu Servicio Escolar</h1>
+          <p class="lead">Conectamos a los mejores conductores con servicios escolares de alta calidad.</p>
+      </div>
+  </div>
+
+  <!-- Características -->
+  <div class="feature">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <img src="https://static.vecteezy.com/system/resources/thumbnails/009/779/806/small/human-resource-management-job-analysis-sourcing-screening-and-selection-female-cartoon-character-reading-job-applications-and-cv-of-candidates-illustration-vector.jpg" alt="Característica 1" width="100%">
+                  <h3>Selección Rigurosa</h3>
+                  <p>Evaluamos cuidadosamente a cada conductor para garantizar la seguridad y confiabilidad.</p>
+              </div>
+              <div class="col-md-4">
+                  <img src="https://www.comunicare.es/wp-content/uploads/2022/01/comunicacion-1080x640-1-93.jpg" alt="Característica 2" width="100%" height="100%">
+                  <h3>Comunicación Transparente</h3>
+                  <p>Fomentamos una comunicación abierta entre conductores, padres y administradores escolares.</p>
+              </div>
+              <div class="col-md-4">
+                  <img src="https://images.credly.com/size/680x680/images/39e4fa15-3148-4d1e-9664-a5e5c3d3b9bf/image.png" alt="Característica 3"width="100%">
+                  <h3>Experiencia Comprobada</h3>
+                  <p>Seleccionamos conductores con experiencia y un historial probado en el transporte escolar.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Llamada a la Acción (Call to Action) -->
+  <div class="cta">
+      <div class="container">
+          <h2>Descubre cómo podemos ayudarte a encontrar a los mejores conductores para tu servicio escolar</h2>
+          <p>Únete a nosotros para garantizar trayectos seguros y confiables para los estudiantes.</p>
+          <a href="{% url "drivers" %}" class="btn btn-light btn-lg">Más Información</a>
+      </div>
+  </div>
 
 
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
           <img style="border-radius: 5%;" src="{% static "img/corporative.bmp" %}" class="d-block w-100" alt="...">
@@ -22,6 +58,19 @@
         </div>
       </div>
   </div>
+
+  <!-- Bootstrap JS y jQuery (si es necesario) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- Bootstrap JS y jQuery (si es necesario) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
 

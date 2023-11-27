@@ -13,3 +13,11 @@ def reviews(request):
 def drivers(request):
     if request.method == "GET":
         return render(request, "drivers.html")
+
+def training(request):
+    if request.method == "GET":
+        return render(request, "training.html")
+    
+def technologies(request):
+    if request.method == "GET":
+        return render(request, "technologies.html")
